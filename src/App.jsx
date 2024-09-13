@@ -29,7 +29,7 @@ function App() {
 
     try {
       const response = await axios.post(
-        'http://localhost:3000/api/v1/blog/createblog',
+        'https://backend-nt45.onrender.com/api/v1/blog/createblog',
         formData,
         {
           headers: { 'Content-Type': 'multipart/form-data' },
@@ -49,7 +49,7 @@ function App() {
 
   const fetchBlog = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/v1/blog/getallblog');
+      const response = await fetch('https://backend-nt45.onrender.com/api/v1/blog/getallblog');
       const data = await response.json();
       console.log('Fetched Blogs:', data); // Debug: log the fetched data
       setShowBlog(data);
